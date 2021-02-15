@@ -6,9 +6,9 @@ import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
-import com.example.demo.kafka.producer.KafkaProducer;
 import com.uvas.common.exceptions.ResourceNotFoundException;
 import com.uvas.entities.customer.CustomerEntity;
+import com.uvas.kafka.producer.KafkaProducer;
 import com.uvas.pojos.customer.Customer;
 import com.uvas.repository.customer.CustomerRepository;
 
@@ -38,9 +38,13 @@ public class CustomerServiceImpl implements CustomerService {
 	}
 
 	private Customer getCustomerDTOFromEntity(CustomerEntity entity) {
-		return new Customer(entity.getId(), entity.getFirstName(), entity.getLastName(), 
-				entity.getAddressline1(), entity.getAddressline2(), entity.getCity(), 
-				entity.getState(), entity.getZip(), entity.getCountry());
+		 Customer customer = new Customer();
+		 
+//			entity.getId(), entity.getFirstName(), entity.getLastName(), 
+//			entity.getAddressline1(), entity.getAddressline2(), entity.getCity(), 
+//			entity.getState(), entity.getZip(), entity.getCountry()
+		 return customer;
+
 	}
 	
 	private CustomerEntity getCustomerEntityFromDTO(Customer dto) {
