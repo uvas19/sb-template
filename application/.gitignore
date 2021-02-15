@@ -1,4 +1,5 @@
 .factorypath
+bin/
 .classpath
 target/
 *.factory
