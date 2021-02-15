@@ -17,7 +17,7 @@ public class TopicAdmin {
     private KafkaProducerProperties kafkaProducerProperties;
 	
     @Bean
-    public NewTopic libraryEvents(){
+    public NewTopic createTopic(){
         return TopicBuilder.name(kafkaProducerProperties.getTopicName())
                 .partitions(1)
                 .replicas(1)
