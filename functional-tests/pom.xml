@@ -6,5 +6,5 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <groupId>com.uvas.functionaltests</groupId>
-  <artifactId>sb-mysql-functional-tests</artifactId>
+  <artifactId>functional-tests</artifactId>
 </project>

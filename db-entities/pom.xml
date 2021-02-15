@@ -8,7 +8,7 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	<groupId>com.uvas.entities</groupId>
-	<artifactId>sb-mysql-db-entities</artifactId>
+	<artifactId>db-entities</artifactId>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

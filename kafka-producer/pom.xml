@@ -8,14 +8,9 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	<groupId>com.uvas.kafka.producer</groupId>
-	<artifactId>sb-mysql-kafka-producer</artifactId>
+	<artifactId>kafka-producer</artifactId>
 	<dependencies>
-		<!-- Common Pojos -->
-		<dependency>
-			<groupId>com.uvas.pojos</groupId>
-			<artifactId>sb-mysql-pojos</artifactId>
-			<version>${project.version}</version>
-		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.kafka</groupId>
 			<artifactId>spring-kafka</artifactId>
@@ -24,6 +19,13 @@
 			<groupId>org.springframework.kafka</groupId>
 			<artifactId>spring-kafka-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+
+		<!-- Common Pojos -->
+		<dependency>
+			<groupId>com.uvas.pojos</groupId>
+			<artifactId>pojos</artifactId>
+			<version>${project.version}</version>
 		</dependency>
 	</dependencies>
 </project>

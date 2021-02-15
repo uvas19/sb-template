@@ -6,5 +6,5 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <groupId>com.uvas.common.utils</groupId>
-  <artifactId>sb-mysql-common-utils</artifactId>
+  <artifactId>common-utils</artifactId>
 </project>

@@ -6,5 +6,5 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <groupId>com.uvas.db.migrations</groupId>
-  <artifactId>sb-mysql-db-migrations</artifactId>
+  <artifactId>db-migrations</artifactId>
 </project>

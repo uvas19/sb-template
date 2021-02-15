@@ -6,5 +6,25 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <groupId>com.uvas.kafka.consumer</groupId>
-  <artifactId>sb-mysql-kafka-consumer</artifactId>
+  <artifactId>kafka-consumer</artifactId>
+  
+  	<dependencies>
+
+		<dependency>
+			<groupId>org.springframework.kafka</groupId>
+			<artifactId>spring-kafka</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.kafka</groupId>
+			<artifactId>spring-kafka-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- Common Pojos -->
+		<dependency>
+			<groupId>com.uvas.pojos</groupId>
+			<artifactId>pojos</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+	</dependencies>
 </project>

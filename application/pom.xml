@@ -8,7 +8,7 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	<groupId>com.uvas.application</groupId>
-	<artifactId>sb-mysql-kafka-application</artifactId>
+	<artifactId>application</artifactId>
 
 	<dependencies>
 		<dependency>
@@ -37,13 +37,13 @@
 		<!-- Services Module Dependency -->
 		<dependency>
 			<groupId>com.uvas.services</groupId>
-			<artifactId>sb-mysql-services</artifactId>
+			<artifactId>services</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<!-- Common Pojos -->
 		<dependency>
 			<groupId>com.uvas.pojos</groupId>
-			<artifactId>sb-mysql-pojos</artifactId>
+			<artifactId>pojos</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 

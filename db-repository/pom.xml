@@ -13,7 +13,7 @@
 		<!-- DB entities -->
 		<dependency>
 			<groupId>com.uvas.entities</groupId>
-			<artifactId>sb-mysql-db-entities</artifactId>
+			<artifactId>db-entities</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 	</dependencies>
