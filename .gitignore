@@ -4,6 +4,8 @@
 *.setting
 target/
 *.zip
+*.factorypath
+*.classpath
 
 # Compiled class file
 *.class
