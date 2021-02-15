@@ -1,6 +1,8 @@
+
 .factorypath
 .classpath
 target/
+bin/
 *.factory
 *.settings
 *.project
