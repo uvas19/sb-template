@@ -39,10 +39,15 @@ public class CustomerServiceImpl implements CustomerService {
 
 	private Customer getCustomerDTOFromEntity(CustomerEntity entity) {
 		 Customer customer = new Customer();
-		 
-//			entity.getId(), entity.getFirstName(), entity.getLastName(), 
-//			entity.getAddressline1(), entity.getAddressline2(), entity.getCity(), 
-//			entity.getState(), entity.getZip(), entity.getCountry()
+		 customer.setId(entity.getId());
+		 customer.setFirstName(entity.getFirstName());
+		 customer.setLastName(entity.getLastName());
+		 customer.setAddressline1(entity.getAddressline1());
+		 customer.setAddressline2(entity.getAddressline2());
+		 customer.setCity(entity.getCity());
+		 customer.setState(entity.getState());
+		 customer.setZip(entity.getZip());
+		 customer.setCountry(entity.getCountry());
 		 return customer;
 
 	}
