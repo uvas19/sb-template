@@ -46,7 +46,12 @@
 			<artifactId>pojos</artifactId>
 			<version>${project.version}</version>
 		</dependency>
-
+		<!-- integration tests with kafka -->
+		<dependency>
+			<groupId>org.springframework.kafka</groupId>
+			<artifactId>spring-kafka-test</artifactId>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
 
 	<build>
