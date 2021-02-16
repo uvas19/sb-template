@@ -2,6 +2,9 @@ package com.uvas.pojos.customer;
 
 import javax.validation.constraints.NotNull;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -11,6 +14,7 @@ import lombok.ToString;
 @Setter
 @NoArgsConstructor
 @ToString
+@JsonInclude(Include.NON_NULL)
 public class Customer {
 
 	private long id;
