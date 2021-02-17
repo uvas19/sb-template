@@ -34,7 +34,7 @@ public class KafkaProducer {
 
 	public void sendMessage(Customer customer) {
 
-		String key = "KEY";
+		String key = "1";
 		String value;
 		try {
 			value = objectMapper.writeValueAsString(customer);
@@ -62,7 +62,9 @@ public class KafkaProducer {
 
 	private ProducerRecord<String, String> buildProducerRecord(String key, String value, String topic) {
 		List<Header> recordHeaders = new ArrayList<>();
-		recordHeaders.add(new RecordHeader("CRID", "scanner".getBytes()));
+//		recordHeaders.add(new RecordHeader("x-biz-svc", "MandateInitiationReqToCsp".getBytes()));
+		recordHeaders.add(new RecordHeader("x-biz-svc", "MandateInitiationConfToBsp".getBytes()));
+		
 		return new ProducerRecord<>(topic, null, key, value, recordHeaders);
 	}
 
