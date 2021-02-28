@@ -39,7 +39,7 @@ public class CustomerServiceImpl implements CustomerService {
 
 	private Customer getCustomerDTOFromEntity(CustomerEntity entity) {
 		 Customer customer = new Customer();
-		 customer.setId(entity.getId());
+		 customer.setId(entity.getSid());
 		 customer.setFirstName(entity.getFirstName());
 		 customer.setLastName(entity.getLastName());
 		 customer.setAddressline1(entity.getAddressline1());
@@ -48,8 +48,8 @@ public class CustomerServiceImpl implements CustomerService {
 		 customer.setState(entity.getState());
 		 customer.setZip(entity.getZip());
 		 customer.setCountry(entity.getCountry());
+		 customer.setCustomerType(entity.getCustomerType());
 		 return customer;
-
 	}
 	
 	private CustomerEntity getCustomerEntityFromDTO(Customer dto) {
@@ -68,6 +68,8 @@ public class CustomerServiceImpl implements CustomerService {
 		entity.setState(dto.getState());
 		entity.setZip(dto.getZip());
 		entity.setCountry(dto.getCountry());
+		entity.setMsgCreateDateTime(dto.getMsgCreateDateTime());
+		entity.setCustomerType(dto.getCustomerType());
 	}
 	
 	

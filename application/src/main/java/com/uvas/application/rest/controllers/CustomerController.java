@@ -35,6 +35,7 @@ public class CustomerController {
 	@PostMapping("/customers")
 	public ResponseEntity<Customer> create(@Valid @RequestBody Customer customer){
 		log.info("create controller");
+		log.info("request :: "+ customer.toString());
 		return ResponseEntity.ok().body(customerService.create(customer));
 	}
 	

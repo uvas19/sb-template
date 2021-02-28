@@ -24,5 +24,16 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<scope>runtime</scope>
 		</dependency>
+		<!-- Common Pojos -->
+		<dependency>
+			<groupId>com.uvas.pojos</groupId>
+			<artifactId>pojos</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.uvas.common.utils</groupId>
+			<artifactId>common-utils</artifactId>
+			<version>${project.version}</version>
+		</dependency>
 	</dependencies>
 </project>

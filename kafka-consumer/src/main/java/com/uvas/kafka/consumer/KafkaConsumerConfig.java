@@ -21,7 +21,6 @@ import org.springframework.retry.backoff.FixedBackOffPolicy;
 import org.springframework.retry.policy.SimpleRetryPolicy;
 import org.springframework.retry.support.RetryTemplate;
 
-import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.uvas.kafka.consumer.interceptor.KafkaConsumerInterceptor;
 
@@ -47,13 +46,10 @@ public class KafkaConsumerConfig {
 	public ConcurrentKafkaListenerContainerFactory<String, String> kafkaListenerContainerFactory() {
 		ConcurrentKafkaListenerContainerFactory<String, String> factory = new ConcurrentKafkaListenerContainerFactory<>();
 		factory.setConsumerFactory(consumerFactory());
-//		factory.getContainerProperties().setAckMode(AckMode.MANUAL);
 		factory.setConcurrency(1);
 		factory.setRetryTemplate(retryTemplate());
 		factory.setRecoveryCallback(callback());
 		factory.setErrorHandler(new KafkaConsumerErrorHandler());
-//		factory.setErrorHandler(new SeekToCurrentErrorHandler(new FixedBackOff(1000L, 2L)));
-
 		return factory;
 	}
 	
@@ -70,7 +66,6 @@ public class KafkaConsumerConfig {
 		props.put(ConsumerConfig.GROUP_ID_CONFIG, kafkaProperties.getGroupId());
 		props.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
 		props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
-//		props.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, Boolean.FALSE);
 		props.put(ConsumerConfig.INTERCEPTOR_CLASSES_CONFIG, KafkaConsumerInterceptor.class.getName());
 		return new DefaultKafkaConsumerFactory<>(props);
 	}
