@@ -22,7 +22,6 @@
 		<module>kafka-producer</module>
 		<module>kafka-consumer</module>
 		<module>services</module>
-		<module>repositories</module>
 		<module>pojos</module>
 		<module>db-entities</module>
 		<module>client</module>

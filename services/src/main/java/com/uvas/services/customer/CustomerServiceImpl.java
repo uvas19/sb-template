@@ -49,6 +49,8 @@ public class CustomerServiceImpl implements CustomerService {
 		 customer.setZip(entity.getZip());
 		 customer.setCountry(entity.getCountry());
 		 customer.setCustomerType(entity.getCustomerType());
+		 customer.setMsgCreateDateTime(entity.getMsgCreateDateTime());
+		 customer.setCustomerType(entity.getCustomerType());
 		 return customer;
 	}
 	

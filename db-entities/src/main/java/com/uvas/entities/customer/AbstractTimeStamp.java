@@ -1,5 +1,7 @@
 package com.uvas.entities.customer;
 
+import static com.uvas.common.date.utils.DateTimeUtil.currentLocalDateTime;
+
 import java.time.LocalDateTime;
 
 import javax.persistence.Column;
@@ -17,7 +19,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.experimental.SuperBuilder;
-import static com.uvas.entities.customer.DateTimeUtil.currentLocalDateTime;
 
 @Getter
 @Setter

@@ -3,11 +3,8 @@ package com.uvas.application.rest.controllers;
 
 import java.util.List;
 
-import javax.validation.Valid;
-
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -24,7 +21,6 @@ import lombok.extern.slf4j.Slf4j;
 
 @RestController
 @Slf4j
-@Validated
 @RequiredArgsConstructor
 public class CustomerController {
 
@@ -33,7 +29,7 @@ public class CustomerController {
 	
 	
 	@PostMapping("/customers")
-	public ResponseEntity<Customer> create(@Valid @RequestBody Customer customer){
+	public ResponseEntity<Customer> create(/*@Valid*/ @RequestBody Customer customer){
 		log.info("create controller");
 		log.info("request :: "+ customer.toString());
 		return ResponseEntity.ok().body(customerService.create(customer));
