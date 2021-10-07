@@ -1,0 +1,6 @@
+______________________________________________________________
+Version: ${application.version}]                                    
+${AnsiColor.RED}Spring Boot Version: ${spring-boot.version}         
+${AnsiColor.DEFAULT}											
+App Name: ${spring.application.name}                			
+--------------------------------------------------------------
